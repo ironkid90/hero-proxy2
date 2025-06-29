@@ -1,15 +1,38 @@
 {
-  "name": "aproxy15",
-  "version": "1.0.1",
-  "description": "Data compression service that converts images to low-res WebP or JPEG on the fly. Used in Bandwidth-Hero browser extension.",
+  "name": "bandwidth-hero-proxy-vercel",
+  "version": "2.0.0",
+  "description": "High-performance image compression service for Bandwidth Hero extension, optimized for Vercel deployment",
   "license": "MIT",
+  "author": "himshim",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/himshim/bandwidth-hero-proxy2"
+  },
   "scripts": {
-    "start": "ntl dev",
-    "test": "jest tests/index.test.js"
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'",
+    "test": "jest tests/",
+    "test:watch": "jest tests/ --watch",
+    "lint": "echo 'No linting configured'",
+    "start": "vercel dev"
   },
   "dependencies": {
     "node-fetch": "^2.7.0",
-    "sharp": "^0.32.4",
-    "jest": "^27.4.5"
-  }
+    "sharp": "^0.33.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "@jest/globals": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "image-compression",
+    "bandwidth-hero",
+    "webp",
+    "serverless",
+    "vercel",
+    "proxy"
+  ]
 }

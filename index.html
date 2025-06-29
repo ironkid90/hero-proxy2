@@ -5,18 +5,137 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bandwidth Hero Proxy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .status {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .endpoint {
+            background: #f5f5f5;
+            border-left: 4px solid #007acc;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Monaco', 'Consolas', monospace;
+            word-break: break-all;
+        }
+        .instructions {
+            background: #fff9c4;
+            border: 1px solid #ffeb3b;
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .warning {
+            background: #ffebee;
+            border: 1px solid #f44336;
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Bandwidth Hero Proxy</h1>
-        <p>Welcome to the Bandwidth Hero Proxy!</p>
-        <p>To use the proxy in the Bandwidth Hero extension, follow these steps:</p>
-        <ol>
-            <li>Open the Bandwidth Hero extension settings.</li>
-            <li>In the Data Compression Service section, add the following URL: <code>https://your-netlify-domain.netlify.app/api/index</code>.</li>
-            <li>Save the settings and you are good to go!</li>
-        </ol>
-        <p>For more information and the source code, visit the <a href="https://github.com/himshim/bandwidth-hero-proxy2">GitHub repository</a>.</p>
+        <h1>🚀 Bandwidth Hero Proxy</h1>
+        
+        <div class="status">
+            ✅ Service is running and ready to compress images!
+        </div>
+
+        <p>This is a high-performance image compression service designed to work with the <strong>Bandwidth Hero</strong> browser extension. It converts images to optimized WebP format on-the-fly, reducing bandwidth usage and improving page load times.</p>
+
+        <div class="instructions">
+            <h3>📱 Setup Instructions</h3>
+            <p>To use this proxy with the Bandwidth Hero extension:</p>
+            <ol>
+                <li>Install the <a href="https://github.com/ayastreb/bandwidth-hero" target="_blank">Bandwidth Hero</a> browser extension</li>
+                <li>Open the extension settings</li>
+                <li>In the <strong>"Data Compression Service"</strong> section, enter this URL:</li>
+            </ol>
+        </div>
+
+        <div class="endpoint">
+            <strong>Compression Service URL:</strong><br>
+            https://hero-proxy2.vercel.app/api/index
+        </div>
+
+        <div class="instructions">
+            <ol start="4">
+                <li>Save the settings</li>
+                <li>Enable the extension and start browsing with compressed images! 🎉</li>
+            </ol>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ Important Notes</h3>
+            <ul>
+                <li>This service compresses images in real-time, which may add a small delay to initial image loads</li>
+                <li>Images are converted to WebP format for optimal compression</li>
+                <li>The service respects original image quality settings when possible</li>
+                <li>Very small images (< 1KB) are not compressed to avoid overhead</li>
+            </ul>
+        </div>
+
+        <h3>🔧 API Usage</h3>
+        <p>You can also use this service directly via API calls:</p>
+        <div class="endpoint">
+            GET /api/index?url=IMAGE_URL&w=WIDTH&q=QUALITY&l=GRAYSCALE
+        </div>
+        <ul>
+            <li><code>url</code> - Source image URL (required)</li>
+            <li><code>w</code> - Maximum width in pixels (required, 1-8192)</li>
+            <li><code>q</code> - Quality percentage (required, 10-100)</li>
+            <li><code>l</code> - Grayscale mode (optional, 1 for grayscale)</li>
+        </ul>
+
+        <div class="footer">
+            <p>Powered by <a href="https://vercel.com" target="_blank">Vercel</a> • 
+            <a href="https://github.com/himshim/bandwidth-hero-proxy2" target="_blank">Source Code</a> • 
+            Built with ❤️ for faster web browsing</p>
+        </div>
     </div>
 </body>
 </html>
