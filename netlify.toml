@@ -1,0 +1,14 @@
+[build]
+  functions = "functions"
+
+# Redirect untuk /api
+[[redirects]]
+  from = "/api"
+  to   = "/.netlify/functions/index"
+  status = 200
+
+# Redirect untuk /api/*
+[[redirects]]
+  from = "/api/*"
+  to   = "/.netlify/functions/index"
+  status = 200
